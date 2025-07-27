@@ -1,0 +1,560 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+main {
+  flex: 1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #f2f2f2;
+}
+
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* change from center to top-start */
+  padding: 100px 20px 60px; /* more space at the top */
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 60px; /* pushes entire content lower */
+}
+
+.hero-image {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+}
+
+.hero-text h2 {
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.hero-text p {
+  margin: 20px auto;
+  max-width: 500px;
+}
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+
+  opacity: 0;
+  transform: translateY(100px);
+  animation: slideUpFadeIn 1.5s ease-out forwards;
+}
+
+/* Keyframes for the new animation */
+@keyframes slideUpFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.buttons .btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+
+  /* 3D Animation */
+  opacity: 0;
+  transform: scale(0.5) rotateX(90deg);
+  animation: popIn 1s ease forwards;
+}
+
+/* Add delay for each button if needed */
+.buttons .btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.buttons .btn:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* Keyframes for entry animation */
+@keyframes popIn {
+  to {
+    opacity: 1;
+    transform: scale(1) rotateX(0deg);
+  }
+}
+
+
+.btn.yellow { background-color: orange; }
+.btn.red    { background-color: red; color: white; }
+.btn.blue   { background-color: #76e0e0; }
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+                                                                      /* footer*/
+.custom-footer {
+  background-color: #f2f2f2;
+  padding: 30px 40px 10px;
+  margin-top: auto;
+}
+
+.footer-top-line {
+  border-top: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-section h4 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  color: #333;
+  margin: 0;
+}
+
+.footer-section img {
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.footer-section.copyright {
+  text-align: right;
+  font-size: 0.85rem;
+}
+
+
+                                                                      /* project section */
+
+.projects-section {
+  padding: 60px 40px;
+}
+
+.projects-section h1 {
+  font-size: 3rem;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+
+.project {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 40px 0;
+  gap: 40px;
+}
+.project-text {
+  flex: 1;
+}
+
+.project h2 {
+  margin-bottom: 10px;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: left;
+}
+
+.projects h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.project {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin-bottom: 60px;
+}
+
+.project-text {
+  max-width: 600px;
+}
+
+.project-text h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.project-text p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.project img {
+  width: 400px; /* 2x bigger */
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Main container styling */
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: left;
+  overflow: hidden; /* Prevents scrollbars from animation overflow */
+}
+
+.projects h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Project row layout */
+.project {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 60px;
+  max-width: 1200px;
+  margin-bottom: 60px;
+}
+
+/* Project text styling */
+.project-text {
+  max-width: 600px;
+  opacity: 0;
+  transform: translateX(-100px);
+  animation: slideInLeft 1.2s ease-out forwards;
+}
+
+.project-text h2 {
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
+
+.project-text p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Image styling */
+.project img {
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  opacity: 0;
+  transform: translateX(100px);
+  animation: slideInRight 1.2s ease-out forwards;
+  animation-delay: 0.2s;
+}
+
+/* Animation keyframes */
+@keyframes slideInLeft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.view-link {
+  text-decoration: none; /* removes underline */
+  font-weight: bold;
+}
+
+.view-link:hover {
+  text-decoration: none; /* still no underline on hover */
+}
+
+
+
+                                                /* contact*/
+
+.contact {
+    color: rgb(1, 1, 1);
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.contact .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+.contact .section-title span {
+    color: rgb(0, 0, 0);
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.contact-info {
+    width: 45%;
+    text-align: left;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact-info i {
+    color: #000000;
+    margin-right: 10px;
+}
+
+.social-icons {
+    margin-top: 15px;
+}
+
+.social-icons a {
+    color: #000000;
+    font-size: 1.5rem;
+    margin-right: 15px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: rgb(0, 0, 0);
+}
+
+/* Contact Form */
+.contact-form {
+    width: 50%;
+}
+
+.contact-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #1e3a5f;
+    color: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #aaa;
+}
+
+.send-btn {
+    background: #00d0ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+                                                                      /*resume*/
+.resume-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.section {
+  margin-bottom: 60px;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.edu-entry {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  align-items: flex-start;
+}
+
+.edu-year {
+  min-width: 80px;
+  font-weight: bold;
+  color: #555;
+}
+
+.skill-list, .cert-list {
+  padding-left: 20px;
+  list-style-type: disc;
+  line-height: 1.8;
+}
+
+
+.resume-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 60px;
+  gap: 200px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid #ccc;
+}
+
+.resume-heading {
+  width: 30%;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #222;
+  text-align: right;
+  padding-right: 100px;
+}
+
+.resume-content {
+  width: 70%;
+  color: #444;
+}
+.resume-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+.edu-entry {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.edu-year {
+  min-width: 80px;
+  font-weight: bold;
+  color: #555;
+}
+
+.skill-list, .cert-list {
+  list-style: disc;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.project h3 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.project p {
+  margin-bottom: 20px;
+}
+
+.resume-btn {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    margin-left: 450px;
+}
+
+.resume-btn:hover {
+    background: #0056b3;
+}
+
+
+
+
+
